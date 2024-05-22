@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Hover Effect</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+      }
+
+      .cards-container {
+        display: flex;
+        gap: 20px;
+      }
+
+      .card {
+        width: 150px;
+        height: 200px;
+        background-color: #4caf50;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        transition: opacity 0.3s;
+      }
+
+      .card:hover {
+        opacity: 1;
+      }
+
+      .card:not(:hover) {
+        opacity: 0.7;
+      }
+
+      .cards-container:hover .card:not(:hover) {
+        opacity: 0.3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cards-container">
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+    </div>
+  </body>
+</html>
